@@ -1,6 +1,10 @@
 #ifndef GAMEINITIALIZATION_H
 #define GAMEINITIALIZATION_H
 
+#include "GraphicsSettings.h"
+
+class GraphicsSettings;
+
 class GameInitialization
 {
 private:
@@ -10,8 +14,11 @@ private:
 	sf::Clock dtClock;
 	float dt;
 
+	GraphicsSettings graphicsSettings;
+
 	// Initialization functions
 	void initVariables();
+	void initGraphicsSettings();
 	void initWindow();
 
 public:

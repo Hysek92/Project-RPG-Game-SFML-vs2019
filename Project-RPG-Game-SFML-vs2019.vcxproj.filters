@@ -16,6 +16,9 @@
     <Filter Include="Pliki źródłowe\GameInitialization">
       <UniqueIdentifier>{2d4e7533-7323-4836-bcca-276af953ae4e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\GameSettings">
+      <UniqueIdentifier>{1c5e117b-cf43-4dbc-b555-0bb7098c9629}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLoop.cpp">
@@ -27,6 +30,9 @@
     <ClCompile Include="GameInitialization.cpp">
       <Filter>Pliki źródłowe\GameInitialization</Filter>
     </ClCompile>
+    <ClCompile Include="GraphicsSettings.cpp">
+      <Filter>Pliki źródłowe\GameSettings</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -34,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="GameInitialization.h">
       <Filter>Pliki źródłowe\GameInitialization</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsSettings.h">
+      <Filter>Pliki źródłowe\GameSettings</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

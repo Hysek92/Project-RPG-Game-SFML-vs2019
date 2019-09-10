@@ -8,16 +8,34 @@ void GameInitialization::initVariables()
 	this->dt = 0.f;
 }
 
+void GameInitialization::initGraphicsSettings()
+{
+	this->graphicsSettings.loadFromFile("Config/GraphicsSettings.ini");
+}
+
 void GameInitialization::initWindow()
 {
-	this->window = new sf::RenderWindow(sf::VideoMode(800, 600), "Game");
-	this->window->setFramerateLimit(120);
+	if (this->graphicsSettings.fullscreen)
+		this->window = new sf::RenderWindow(
+			this->graphicsSettings.resolution,
+			this->graphicsSettings.title,
+			sf::Style::Fullscreen,
+			this->graphicsSettings.contextSettings
+		);
+	else
+		this->window = new sf::RenderWindow(
+			this->graphicsSettings.resolution,
+			this->graphicsSettings.title,
+			sf::Style::Titlebar | sf::Style::Close,
+			this->graphicsSettings.contextSettings
+		);
 }
 
 // Constructors and Destructors
 GameInitialization::GameInitialization()
 {
 	this->initVariables();
+	this->initGraphicsSettings();
 	this->initWindow();
 }
 
