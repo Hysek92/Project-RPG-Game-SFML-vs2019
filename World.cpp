@@ -10,7 +10,7 @@ void World::initVarialbes()
 void World::initTextures()
 {
 	if (!this->textures["PLAYER_SHEET"].loadFromFile("Resources/Images/Sprites/PLAYER_SHEET.png"))
-		throw "ERROR::WORLD::COULD_NOT_LOAD_FONT";
+		std::cerr << "ERROR::WORLD::COULD_NOT_LOAD_FONT" << "\n";
 }
 
 void World::initPlayer()
@@ -34,7 +34,7 @@ World::~World()
 // Functions
 void World::update(const float& dt)
 {
-
+	this->player->update(dt);
 }
 
 void World::render(sf::RenderTarget& target)

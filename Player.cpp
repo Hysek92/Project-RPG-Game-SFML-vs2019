@@ -13,9 +13,9 @@ Player::~Player()
 }
 
 // Functions
-void Player::update()
+void Player::update(const float& dt)
 {
-
+	this->animationComponent.animation(dt, this->sprite);
 }
 
 void Player::render(sf::RenderTarget& target)

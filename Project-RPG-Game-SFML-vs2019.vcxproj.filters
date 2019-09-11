@@ -25,6 +25,9 @@
     <Filter Include="Pliki źródłowe\Player">
       <UniqueIdentifier>{44be836c-19b3-46f8-b513-ecf3d2c15bff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\Components">
+      <UniqueIdentifier>{4676b038-876a-4d1d-bd38-69229a32a93f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLoop.cpp">
@@ -45,6 +48,9 @@
     <ClCompile Include="Player.cpp">
       <Filter>Pliki źródłowe\Player</Filter>
     </ClCompile>
+    <ClCompile Include="AnimationComponent.cpp">
+      <Filter>Pliki źródłowe\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -61,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="Player.h">
       <Filter>Pliki źródłowe\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationComponent.h">
+      <Filter>Pliki źródłowe\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

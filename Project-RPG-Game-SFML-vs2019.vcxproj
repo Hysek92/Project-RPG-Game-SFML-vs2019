@@ -131,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AnimationComponent.cpp" />
     <ClCompile Include="GameInitialization.cpp" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="GraphicsSettings.cpp" />
@@ -142,6 +143,7 @@
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimationComponent.h" />
     <ClInclude Include="GameInitialization.h" />
     <ClInclude Include="GraphicsSettings.h" />
     <ClInclude Include="Player.h" />
