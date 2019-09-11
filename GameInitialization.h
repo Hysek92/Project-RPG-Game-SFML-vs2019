@@ -2,8 +2,10 @@
 #define GAMEINITIALIZATION_H
 
 #include "GraphicsSettings.h"
+#include "World.h"
 
 class GraphicsSettings;
+class World;
 
 class GameInitialization
 {
@@ -15,6 +17,7 @@ private:
 	float dt;
 
 	GraphicsSettings graphicsSettings;
+	World world;
 
 	// Initialization functions
 	void initVariables();

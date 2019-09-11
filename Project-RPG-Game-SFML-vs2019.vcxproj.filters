@@ -19,6 +19,12 @@
     <Filter Include="Pliki źródłowe\GameSettings">
       <UniqueIdentifier>{1c5e117b-cf43-4dbc-b555-0bb7098c9629}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\World">
+      <UniqueIdentifier>{1d4b6c7b-1d68-458b-975d-710cb8ddf5b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Player">
+      <UniqueIdentifier>{44be836c-19b3-46f8-b513-ecf3d2c15bff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLoop.cpp">
@@ -33,6 +39,12 @@
     <ClCompile Include="GraphicsSettings.cpp">
       <Filter>Pliki źródłowe\GameSettings</Filter>
     </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Pliki źródłowe\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Pliki źródłowe\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -43,6 +55,12 @@
     </ClInclude>
     <ClInclude Include="GraphicsSettings.h">
       <Filter>Pliki źródłowe\GameSettings</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>Pliki źródłowe\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Pliki źródłowe\Player</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

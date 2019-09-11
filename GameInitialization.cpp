@@ -62,11 +62,13 @@ void GameInitialization::updateEvent()
 void GameInitialization::update()
 {
 	this->updateEvent();
+	this->world.update(this->dt);
 }
 
 void GameInitialization::render()
 {
 	this->window->clear();
+	this->world.render(*this->window);
 	this->window->display();
 }
 
