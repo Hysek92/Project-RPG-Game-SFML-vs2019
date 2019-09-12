@@ -29,6 +29,9 @@ void GameInitialization::initWindow()
 			sf::Style::Titlebar | sf::Style::Close,
 			this->graphicsSettings.contextSettings
 		);
+
+	this->window->setFramerateLimit(this->graphicsSettings.frameRateLimit);
+	this->window->setVerticalSyncEnabled(this->graphicsSettings.verticalSync);
 }
 
 // Constructors and Destructors

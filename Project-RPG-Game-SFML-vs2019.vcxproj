@@ -135,6 +135,7 @@
     <ClCompile Include="GameInitialization.cpp" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="GraphicsSettings.cpp" />
+    <ClCompile Include="MovementComponent.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -146,6 +147,7 @@
     <ClInclude Include="AnimationComponent.h" />
     <ClInclude Include="GameInitialization.h" />
     <ClInclude Include="GraphicsSettings.h" />
+    <ClInclude Include="MovementComponent.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="World.h" />

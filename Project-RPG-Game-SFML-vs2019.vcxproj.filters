@@ -51,6 +51,9 @@
     <ClCompile Include="AnimationComponent.cpp">
       <Filter>Pliki źródłowe\Components</Filter>
     </ClCompile>
+    <ClCompile Include="MovementComponent.cpp">
+      <Filter>Pliki źródłowe\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -69,6 +72,9 @@
       <Filter>Pliki źródłowe\Player</Filter>
     </ClInclude>
     <ClInclude Include="AnimationComponent.h">
+      <Filter>Pliki źródłowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementComponent.h">
       <Filter>Pliki źródłowe\Components</Filter>
     </ClInclude>
   </ItemGroup>

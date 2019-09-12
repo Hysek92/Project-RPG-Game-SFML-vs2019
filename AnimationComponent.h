@@ -11,8 +11,6 @@ private:
 	int startFrameY;
 	int framesX;
 	int framesY;
-	
-	
 
 	float timer;
 	float animationTimer;
@@ -26,11 +24,16 @@ private:
 
 public:
 	// Constructors and Destructors
-	AnimationComponent();
+	AnimationComponent(
+		int width, int heigh, 
+		int start_frame_x, int start_frame_y,
+		int frames_x, int frames_y,
+		float animation_timer
+	);
 	virtual ~AnimationComponent();
 
 	// Functions
-	void animation(const float& dt, sf::Sprite& sprite);
+	void playAnimation(const float& dt, sf::Sprite& sprite);
 };
 
 #endif // !ANIMATIONCOMPONENT_H

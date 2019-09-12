@@ -1,8 +1,10 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include "MovementComponent.h"
 #include "AnimationComponent.h"
 
+class MovementComponent;
 class AnimationComponent;
 
 class Player
@@ -10,7 +12,8 @@ class Player
 private:
 	// Variables
 	sf::Sprite sprite;
-	AnimationComponent animationComponent;
+	MovementComponent movementComponent;
+	std::map<std::string, AnimationComponent*> animations;
 
 public:
 	// Constructors and Destructors

@@ -3,36 +3,26 @@
 
 void AnimationComponent::initVariables()
 {
-	this->width = 64;
-	this->height = 64;
-	this->startFrameX = 1;
-	this->startFrameY = 1;
-	this->framesX = 9;
-	this->framesY = 1;
-	
-
 	this->timer = 0.f;
-	this->animationTimer = 10.f;
-
-	this->startRect = sf::IntRect(
-		(this->startFrameX * this->width) - this->width, 
-		(this->startFrameY * this->height) - this->height, 
-		this->width, this->height
-	);
-
-	this->currentRect = this->startRect;
-
-	this->endRect = sf::IntRect(
-		(this->framesX * this->width) - this->width, 
-		(this->framesY * this->height) - this->height, 
-		this->width, this->height
-	);
 }
 
 // Constructors and Destructors
-AnimationComponent::AnimationComponent()
+AnimationComponent::AnimationComponent(
+	int width, int height,
+	int start_frame_x, int start_frame_y,
+	int frames_x, int frames_y,
+	float animation_timer
+)
+	: width(width), height(height), 
+	startFrameX(start_frame_x), startFrameY(start_frame_y),
+	framesX(frames_x), framesY(frames_y),
+	animationTimer(animation_timer)
 {
 	this->initVariables();
+
+	this->startRect = sf::IntRect((this->startFrameX * this->width) - this->width, (this->startFrameY * this->height) - this->height, this->width, this->height);
+	this->currentRect = this->startRect;
+	this->endRect = sf::IntRect((this->framesX * this->width) - this->width, (this->framesY * this->height) - this->height, this->width, this->height);
 }
 
 AnimationComponent::~AnimationComponent()
@@ -41,7 +31,7 @@ AnimationComponent::~AnimationComponent()
 }
 
 // Functions
-void AnimationComponent::animation(const float& dt, sf::Sprite& sprite)
+void AnimationComponent::playAnimation(const float& dt, sf::Sprite& sprite)
 {
 	this->timer += 100 * dt;
 	if (this->timer >= this->animationTimer)
