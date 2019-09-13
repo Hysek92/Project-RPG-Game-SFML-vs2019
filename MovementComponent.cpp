@@ -24,18 +24,32 @@ MovementComponent::~MovementComponent()
 
 }
 
-const int MovementComponent::movementState()
+const bool MovementComponent::getState(const short unsigned state) const
 {
-	if (this->move[MOVE_UP] == true)
-		return MOVE_UP;
-	else if (this->move[MOVE_DOWN] == true)
-		return MOVE_DOWN;
-	else if (this->move[MOVE_LEFT] == true)
-		return MOVE_LEFT;
-	else if (this->move[MOVE_RIGHT] == true)
-		return MOVE_RIGHT;
-	else
-		return false;
+	switch (state)
+	{
+	case IDLE:
+		if (this->posX == this->nextTile.x && this->posY == this->nextTile.y)
+			return true;
+		break;
+	case MOVE_UP:
+		if (this->posY > this->nextTile.y)
+			return true;
+		break;
+	case MOVE_DOWN:
+		if (this->posY < this->nextTile.y)
+			return true;
+		break;
+	case MOVE_LEFT:
+		if (this->posX > this->nextTile.x)
+			return true;
+		break;
+	case MOVE_RIGHT:
+		if ((this->posX < this->nextTile.x))
+			return true;
+		break;
+	}
+	return false;
 }
 
 // Functions
@@ -46,9 +60,9 @@ void MovementComponent::movement()
 		if (this->move[MOVE_UP] == true)
 		{
 			this->posY -= this->movementSpeed;
-			if (this->posY <= this->nextTile)
+			if (this->posY <= this->nextTile.y)
 			{
-				this->posY = this->nextTile;
+				this->posY = this->nextTile.y;
 				this->move[MOVE_UP] = false;
 				this->moving = false;
 			}
@@ -56,9 +70,9 @@ void MovementComponent::movement()
 		else if (this->move[MOVE_DOWN] == true)
 		{
 			this->posY += this->movementSpeed;
-			if (this->nextTile <= this->posY)
+			if (this->nextTile.y <= this->posY)
 			{
-				this->posY = this->nextTile;
+				this->posY = this->nextTile.y;
 				this->move[MOVE_DOWN] = false;
 				this->moving = false;
 			}
@@ -66,9 +80,9 @@ void MovementComponent::movement()
 		else if (this->move[MOVE_LEFT] == true)
 		{
 			this->posX -= this->movementSpeed;
-			if (this->nextTile >= this->posX)
+			if (this->nextTile.x >= this->posX)
 			{
-				this->posX = this->nextTile;
+				this->posX = this->nextTile.x;
 				this->move[MOVE_LEFT] = false;
 				this->moving = false;
 			}
@@ -76,9 +90,9 @@ void MovementComponent::movement()
 		else if (this->move[MOVE_RIGHT] == true)
 		{
 			this->posX += this->movementSpeed;
-			if (this->nextTile <= this->posX)
+			if (this->nextTile.x <= this->posX)
 			{
-				this->posX = this->nextTile;
+				this->posX = this->nextTile.x;
 				this->move[MOVE_RIGHT] = false;
 				this->moving = false;
 			}
@@ -92,7 +106,7 @@ void MovementComponent::updateImput()
 	{
 		if (!this->moving)
 		{
-			this->nextTile = this->posY - this->tileSize;
+			this->nextTile.y = this->posY - this->tileSize;
 			this->move[MOVE_UP] = true;
 			this->moving = true;
 		}
@@ -101,7 +115,7 @@ void MovementComponent::updateImput()
 	{
 		if (!this->moving)
 		{
-			this->nextTile = this->posY + this->tileSize;
+			this->nextTile.y = this->posY + this->tileSize;
 			this->move[MOVE_DOWN] = true;
 			this->moving = true;
 		}
@@ -110,7 +124,7 @@ void MovementComponent::updateImput()
 	{
 		if (!this->moving)
 		{
-			this->nextTile = this->posX - this->tileSize;
+			this->nextTile.x = this->posX - this->tileSize;
 			this->move[MOVE_LEFT] = true;
 			this->moving = true;
 		}
@@ -119,7 +133,7 @@ void MovementComponent::updateImput()
 	{
 		if (!this->moving)
 		{
-			this->nextTile = this->posX + this->tileSize;
+			this->nextTile.x = this->posX + this->tileSize;
 			this->move[MOVE_RIGHT] = true;
 			this->moving = true;
 		}
@@ -131,5 +145,9 @@ void MovementComponent::update(sf::Sprite& sprite)
 	this->updateImput();
 	this->movement();
 	sprite.setPosition(this->posX, this->posY);
+
+	system("cls");
+	std::cout << "posX" << this->posX << " | " << this->nextTile.x << "\n";
+	std::cout << "posY" << this->posY << " | " << this->nextTile.y << "\n";
 }
  

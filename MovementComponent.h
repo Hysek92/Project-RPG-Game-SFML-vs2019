@@ -10,7 +10,7 @@ private:
 	float posX;
 	float posY;
 	float tileSize;
-	int nextTile;
+	sf::Vector2f nextTile;
 	float movementSpeed;
 	bool moving;
 	bool move[5];
@@ -24,7 +24,7 @@ public:
 	virtual ~MovementComponent();
 
 	// Functions
-	const int movementState();
+	const bool getState(const short unsigned state) const;
 
 	void movement();
 	void updateImput();

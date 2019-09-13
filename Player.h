@@ -14,6 +14,10 @@ private:
 	sf::Sprite sprite;
 	MovementComponent movementComponent;
 	std::map<std::string, AnimationComponent*> animations;
+	float animationSpeed;
+
+	// Initialization functions
+	void initVariables();
 
 public:
 	// Constructors and Destructors
