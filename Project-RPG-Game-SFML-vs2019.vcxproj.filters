@@ -28,6 +28,9 @@
     <Filter Include="Pliki źródłowe\Components">
       <UniqueIdentifier>{4676b038-876a-4d1d-bd38-69229a32a93f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\Monster">
+      <UniqueIdentifier>{a2d5e23f-71e6-42da-8494-aed92c3f296f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLoop.cpp">
@@ -54,6 +57,9 @@
     <ClCompile Include="MovementComponent.cpp">
       <Filter>Pliki źródłowe\Components</Filter>
     </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>Pliki źródłowe\Monster</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -76,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="MovementComponent.h">
       <Filter>Pliki źródłowe\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>Pliki źródłowe\Monster</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

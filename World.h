@@ -2,21 +2,24 @@
 #define WORLD_H
 
 #include "Player.h"
+#include "Monster.h"
 
 class Player;
+class Monster;
 
 class World
 {
 private:
 	// Variables
 	std::map<std::string, sf::Texture> textures;
-
+	sf::Font font;
 	Player* player;
+	Monster monster;
 
 	// Initialization variables
 	void initVarialbes();
+	void initFont();
 	void initTextures();
-
 	void initPlayer();
 
 public:

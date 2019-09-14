@@ -145,9 +145,5 @@ void MovementComponent::update(sf::Sprite& sprite)
 	this->updateImput();
 	this->movement();
 	sprite.setPosition(this->posX, this->posY);
-
-	system("cls");
-	std::cout << "posX" << this->posX << " | " << this->nextTile.x << "\n";
-	std::cout << "posY" << this->posY << " | " << this->nextTile.y << "\n";
 }
  
