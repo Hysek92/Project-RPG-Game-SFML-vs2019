@@ -12,6 +12,7 @@ class Player
 private:
 	// Variables
 	sf::Sprite sprite;
+	std::stringstream ss;
 	sf::Text playerName;
 
 	MovementComponent movementComponent;

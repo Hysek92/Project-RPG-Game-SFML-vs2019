@@ -42,10 +42,7 @@ World::~World()
 void World::update(const float& dt)
 {
 	this->player->update(dt);
-	this->monster.update(
-		this->player->getPosition().x, 
-		this->player->getPosition().y
-	);
+	this->monster.update(this->player->getPosition().x, this->player->getPosition().y);
 }
 
 void World::render(sf::RenderTarget& target)

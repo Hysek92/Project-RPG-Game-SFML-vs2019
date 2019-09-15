@@ -15,7 +15,12 @@ private:
 	bool moving;
 	bool move[4];
 
-	sf::RectangleShape shape;
+	sf::Sprite sprite;
+	sf::Texture texture;
+	sf::IntRect intRect;
+
+	sf::Font font;
+	sf::Text monsterName;
 
 	// Initialization functions
 	void initVariables();
@@ -29,6 +34,7 @@ public:
 	// Functions
 	void movement();
 	void updatePosition(const float& pos_x, const float& pos_y);
+	const sf::Vector2f getPosition();
 	void update(const float& pos_x, const float& pos_y);
 	void render(sf::RenderTarget& target);
 };

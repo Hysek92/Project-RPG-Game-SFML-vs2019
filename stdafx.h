@@ -4,6 +4,7 @@
 // Core
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 // SFML
 #include <SFML/System.hpp>
